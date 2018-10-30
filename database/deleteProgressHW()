@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION "public"."delProgress"()
+CREATE OR REPLACE FUNCTION "public"."delProgressHW"()
   RETURNS "pg_catalog"."void" AS $BODY$
 << outerblock >>
 BEGIN

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION "public"."delProgressTest()"()
+CREATE OR REPLACE FUNCTION public."delProgressTest"()
   RETURNS "pg_catalog"."void" AS $BODY$
 << outerblock >>
 BEGIN
