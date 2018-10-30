@@ -1,0 +1,70 @@
+CREATE OR REPLACE FUNCTION "public"."addProgressHW"()
+  RETURNS "pg_catalog"."void" AS $BODY$
+<< outerblock >>
+BEGIN
+	INSERT INTO public.workbook(
+		    id, student_id, lesson_id, lesson_rev_id, created_at, passed_at, updated_at, project_id, current_step_rev_id)
+	    VALUES (4254550, 2564604, 7803, 940435, '2018-09-26 19:17:33', '2018-10-10 09:06:40', '2018-10-10 09:06:40', 1, 798901);
+	
+	INSERT INTO public.workbook_step(
+		    id, workbook_id, step_rev_id, created_at, completed_at, score, completeness, updated_at, step_uuid, step_rev_locked, is_interactive)
+	    VALUES (515403678, 4254550, 798901, '2018-09-26 19:17:45', NULL, 3.0, 80, '2018-09-27 13:52:20', '1c26485d-a7bd-4dc6-8070-29fb25345008', 't', 't');
+	INSERT INTO public.workbook_step(
+		    id, workbook_id, step_rev_id, created_at, completed_at, score, completeness, updated_at, step_uuid, step_rev_locked, is_interactive)
+	    VALUES (515403679, 4254550, 798902,	'2018-09-26 19:17:45', NULL, 2.5,	75,	'2018-09-27 14:24:18',	'3ce06639-c2eb-4713-a370-b3a649914a2a',	't', 't');
+	INSERT INTO public.workbook_step(
+		    id, workbook_id, step_rev_id, created_at, completed_at, score, completeness, updated_at, step_uuid, step_rev_locked, is_interactive)
+	    VALUES (515403680, 4254550,	798903,	'2018-09-26 19:17:45', NULL,	2.5,	75,	'2018-09-27 14:24:44', 'bcb25ee8-aab9-40e3-ac6f-8d4e060ba746', 't', 't');
+	INSERT INTO public.workbook_step(
+		    id, workbook_id, step_rev_id, created_at, completed_at, score, completeness, updated_at, step_uuid, step_rev_locked, is_interactive)
+	    VALUES (515403681,	4254550,	798905,	'2018-09-26 19:17:45', NULL, 2.5,	75,	'2018-09-27 14:26:18',	'e194a467-bc23-4133-96da-1b59f1778d11',	't',	't');
+	INSERT INTO public.workbook_step(
+		    id, workbook_id, step_rev_id, created_at, completed_at, score, completeness, updated_at, step_uuid, step_rev_locked, is_interactive)
+	    VALUES (515403682,	4254550,	798907,	'2018-09-26 19:17:45', NULL,	2.5, 75,		'2018-09-27 14:26:36',	'66260539-9361-4c84-8433-72c25f06dec3',	't',	't');
+	INSERT INTO public.workbook_step(
+		    id, workbook_id, step_rev_id, created_at, completed_at, score, completeness, updated_at, step_uuid, step_rev_locked, is_interactive)
+	    VALUES (515403683,	4254550,	798911,	'2018-09-26 19:17:45', NULL,	3.8, 76,	'2018-09-27 14:28:04',	'3e707f1f-b96c-465d-970a-08d639c4e5bc',	't',	't');
+	INSERT INTO public.workbook_step(
+		    id, workbook_id, step_rev_id, created_at, completed_at, score, completeness, updated_at, step_uuid, step_rev_locked, is_interactive)
+	    VALUES (515403684,	4254550,	798912,	'2018-09-26 19:17:45', NULL,	NULL, 0,	'2018-09-27 19:06:22',	'beb3655c-42fa-4cc6-84e6-9dfea25d9cf5',	't',	't');
+	INSERT INTO public.workbook_step(
+		    id, workbook_id, step_rev_id, created_at, completed_at, score, completeness, updated_at, step_uuid, step_rev_locked, is_interactive)
+	    VALUES (515403685,	4254550,	798913,	'2018-09-26 19:17:45', NULL,	3.8,	76,	'2018-09-27 14:31:25',	'e8074564-eaff-4e90-98b5-c5a0dc5c5f6d',	't',	't');
+	
+	
+			
+
+	INSERT INTO public.homework(
+		    id, workbook_id, teacher_id, started_at, created_at, updated_at, score, completeness, steps_count)
+	    VALUES (2216915, 4254550, 168403, '2018-09-27 13:50:37', '2018-09-26 19:17:45', '2018-09-27 19:06:22', 3.9, 44, 1);
+			
+	INSERT INTO public.homework_workbook_step(
+		    id, homework_id, workbook_step_id, created_at, updated_at)
+	    VALUES (17816548, 2216915, 515403678, '2018-09-26 19:17:46', '2018-09-26 19:17:46');
+	INSERT INTO public.homework_workbook_step(
+		    id, homework_id, workbook_step_id, created_at, updated_at)
+	    VALUES (17816549, 2216915, 515403679, '2018-09-26 19:17:46', '2018-09-26 19:17:46');
+	INSERT INTO public.homework_workbook_step(
+		    id, homework_id, workbook_step_id, created_at, updated_at)
+	    VALUES (17816550, 2216915, 515403680, '2018-09-26 19:17:46', '2018-09-26 19:17:46');
+	INSERT INTO public.homework_workbook_step(
+		    id, homework_id, workbook_step_id, created_at, updated_at)
+	    VALUES (17816551, 2216915, 515403681, '2018-09-26 19:17:46', '2018-09-26 19:17:46');
+	INSERT INTO public.homework_workbook_step(
+		    id, homework_id, workbook_step_id, created_at, updated_at)
+	    VALUES (17816552, 2216915, 515403682, '2018-09-26 19:17:46', '2018-09-26 19:17:46');
+	INSERT INTO public.homework_workbook_step(
+		    id, homework_id, workbook_step_id, created_at, updated_at)
+	    VALUES (17816553, 2216915, 515403683, '2018-09-26 19:17:46', '2018-09-26 19:17:46');
+	INSERT INTO public.homework_workbook_step(
+		    id, homework_id, workbook_step_id, created_at, updated_at)
+	    VALUES (17816554, 2216915, 515403684, '2018-09-26 19:17:46', '2018-09-26 19:17:46');
+	INSERT INTO public.homework_workbook_step(
+		    id, homework_id, workbook_step_id, created_at, updated_at)
+	    VALUES (17816555, 2216915, 515403685, '2018-09-26 19:17:46', '2018-09-26 19:17:46');
+	
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100

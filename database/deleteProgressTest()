@@ -1,0 +1,14 @@
+CREATE OR REPLACE FUNCTION "public"."delProgressTest()"()
+  RETURNS "pg_catalog"."void" AS $BODY$
+<< outerblock >>
+BEGIN
+	DELETE FROM step_change where workbook_id = 4693564;
+	DELETE FROM room_workbook where workbook_id = 4693564;
+	DELETE FROM test_workbook_step where test_id = 754780;
+	DELETE FROM test where workbook_id = 4693564; 
+	DELETE FROM workbook_step where workbook_id = 4693564;
+	DELETE FROM workbook where id = 4693564;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100
